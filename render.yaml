@@ -1,0 +1,24 @@
+# render.yaml — place at freight-matching/ root
+services:
+  - type: web
+    name: freight-matching-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false # marks as secret — set manually in dashboard
+      - key: JWT_SECRET
+        sync: false
+      - key: GOOGLE_MAPS_BACKEND_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
