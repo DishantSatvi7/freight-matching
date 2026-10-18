@@ -1,0 +1,34 @@
+# Build artifacts
+dist/
+build/
+*.js.map
+
+# Environment variables — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# OS / Editor
+.DS_Store
+.idea/
+*.swp
+
+# Uploads / temp files (adjust to your app)
+uploads/
+tmp/
