@@ -61,7 +61,7 @@ const INITIAL_FALLBACK: Shipment[] = [
     milestones: [
       { id: "m-1", status: "BOOKED", title: "Consignment Confirmed", location: "JNPT Freight Terminal", timestamp: "10:30 IST", completed: true, current: false },
       { id: "m-2", status: "DISPATCHED", title: "Loaded & Weighed", location: "JNPT Dock 3", timestamp: "11:45 IST", completed: true, current: false },
-      { id: "m-3", status: "IN TRANSIT", title: "Cruising on Expressway", location: "Khalapur Toll KM 38", timestamp: "13:10 IST", completed: false, current: true, notes: "Speed: 62 km/h" },
+      { id: "m-3", status: "IN_TRANSIT", title: "Cruising on Expressway", location: "Khalapur Toll KM 38", timestamp: "13:10 IST", completed: false, current: true, notes: "Speed: 62 km/h" },
       { id: "m-4", status: "DELIVERED", title: "Chakan Hub Delivery", location: "Pune Auto Cluster", timestamp: "Pending", completed: false, current: false },
     ],
   },
@@ -95,7 +95,7 @@ const INITIAL_FALLBACK: Shipment[] = [
     milestones: [
       { id: "m-1", status: "BOOKED", title: "Consignment Booked", location: "Surat Ring Road Depot", timestamp: "13:15 IST", completed: true, current: true },
       { id: "m-2", status: "DISPATCHED", title: "Dispatched from Origin", location: "Surat GIDC Terminal", timestamp: "Pending", completed: false, current: false },
-      { id: "m-3", status: "IN TRANSIT", title: "NH-48 Transit", location: "Vadodara Bypass", timestamp: "Pending", completed: false, current: false },
+      { id: "m-3", status: "IN_TRANSIT", title: "NH-48 Transit", location: "Vadodara Bypass", timestamp: "Pending", completed: false, current: false },
       { id: "m-4", status: "DELIVERED", title: "Destination Hub", location: "Ahmedabad Narol Hub", timestamp: "Pending", completed: false, current: false },
     ],
   },
@@ -128,7 +128,7 @@ const INITIAL_FALLBACK: Shipment[] = [
     milestones: [
       { id: "m-1", status: "BOOKED", title: "Booked & Assigned", location: "Pune Bhosari", timestamp: "11:00 IST", completed: true, current: false },
       { id: "m-2", status: "DISPATCHED", title: "Dispatched", location: "Pune Gate 2", timestamp: "13:00 IST", completed: true, current: false },
-      { id: "m-3", status: "IN TRANSIT", title: "Sangamner Pass", location: "NH-60 KM 118", timestamp: "18:20 IST", completed: true, current: false },
+      { id: "m-3", status: "IN_TRANSIT", title: "Sangamner Pass", location: "NH-60 KM 118", timestamp: "18:20 IST", completed: true, current: false },
       { id: "m-4", status: "DELIVERED", title: "ePOD Signed", location: "Nashik Ambad", timestamp: "09:45 IST", completed: true, current: false },
     ],
   },
@@ -250,7 +250,7 @@ export default function ShipmentTracker() {
         milestones: [
           { id: "m1", status: "BOOKED", title: "Consignment Booked", location: `${origin} Terminal`, timestamp: "Just now", completed: true, current: true },
           { id: "m2", status: "DISPATCHED", title: "Gate Cleared", location: `${origin} Exit Dock`, timestamp: "Pending", completed: false, current: false },
-          { id: "m3", status: "IN TRANSIT", title: `Corridor Route to ${destination}`, location: "Express Highway", timestamp: "Pending", completed: false, current: false },
+          { id: "m3", status: "IN_TRANSIT", title: `Corridor Route to ${destination}`, location: "Express Highway", timestamp: "Pending", completed: false, current: false },
           { id: "m4", status: "DELIVERED", title: `Delivery at ${destination}`, location: `${destination} Warehouse`, timestamp: "Pending", completed: false, current: false },
         ],
       };
@@ -541,7 +541,7 @@ export default function ShipmentTracker() {
                         className={`font-mono text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border ${
                           activeShipment.status === 'DELIVERED'
                             ? 'bg-emerald-950/60 border-emerald-500 text-emerald-400'
-                            : activeShipment.status === 'IN TRANSIT'
+                            : activeShipment.status === 'IN_TRANSIT'
                             ? 'bg-sky-950/60 border-sky-400 text-sky-400'
                             : 'bg-amber-950/60 border-amber-500 text-amber-400'
                         }`}
