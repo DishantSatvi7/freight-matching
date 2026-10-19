@@ -15,7 +15,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
     marketRate: 14200,
     savingsAmount: 3750,
     savingsPct: 26,
-    status: "IN TRANSIT",
+    status: "IN_TRANSIT",
     progressPct: 65,
     currentCheckpoint: "Navi Mumbai Expressway KM 42",
     eta: "2.1 hrs",
@@ -52,7 +52,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
       },
       {
         id: "m-3",
-        status: "IN TRANSIT",
+        status: "IN_TRANSIT",
         title: "Cruising on Mumbai-Pune Expressway",
         location: "Khalapur Toll KM 38",
         timestamp: "2026-10-18 13:10 IST",
@@ -129,7 +129,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
       },
       {
         id: "m-3",
-        status: "IN TRANSIT",
+        status: "IN_TRANSIT",
         title: "En Route NH-48 Vadodara Bypass",
         location: "Vadodara Express Highway",
         timestamp: "Expected 16:30 IST",
@@ -196,7 +196,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
       },
       {
         id: "m-3",
-        status: "IN TRANSIT",
+        status: "IN_TRANSIT",
         title: "Crossed Sangamner Pass Checkpoint",
         location: "NH-60 KM 118",
         timestamp: "2026-10-17 18:20 IST",
@@ -228,7 +228,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
     marketRate: 35500,
     savingsAmount: 8700,
     savingsPct: 25,
-    status: "IN TRANSIT",
+    status: "IN_TRANSIT",
     progressPct: 45,
     currentCheckpoint: "NH-44 Adilabad Bypass Toll Plaza",
     eta: "6.5 hrs",
@@ -263,7 +263,7 @@ const INITIAL_SHIPMENTS: Shipment[] = [
       },
       {
         id: "m-3",
-        status: "IN TRANSIT",
+        status: "IN_TRANSIT",
         title: "Approaching Adilabad Telangana-MH Border",
         location: "NH-44 Toll Plaza KM 288",
         timestamp: "2026-10-18 12:45 IST",
@@ -400,7 +400,7 @@ class ShipmentService {
         },
         {
           id: `m-3-${Date.now()}`,
-          status: "IN TRANSIT",
+          status: "IN_TRANSIT",
           title: `Transit Along Corridor to ${input.destination}`,
           location: `Highway Checkpoint En Route`,
           timestamp: "Pending",
