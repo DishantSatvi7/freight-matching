@@ -44,7 +44,7 @@ const INITIAL_FALLBACK: Shipment[] = [
     marketRate: 14200,
     savingsAmount: 3750,
     savingsPct: 26,
-    status: "IN TRANSIT",
+    status: "IN_TRANSIT",
     progressPct: 65,
     currentCheckpoint: "Navi Mumbai Expressway KM 42",
     eta: "2.1 hrs",
